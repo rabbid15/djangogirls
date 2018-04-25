@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from datetime import datetime
-from django import template
+from django import forms
 
 
 def hello_world(request):
@@ -11,8 +11,7 @@ def hello_world(request):
 	})
 
 def calculate(request):
-	result = None
-	a=b=c=0
+
 	if request.method == 'POST':
 		a = int(request.POST.get('first'))
 		b = int(request.POST.get('last'))

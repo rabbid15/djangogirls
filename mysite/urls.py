@@ -16,10 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from accounting.views import hello_world, calculate
+from Accounts_Payable.views import payable
+from chunlaitumu.views import webpage
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/',hello_world),
+    path('payable/', payable),
     path('math/',calculate),
+    path('webpage/',webpage),
 ]
